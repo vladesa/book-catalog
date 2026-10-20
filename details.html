@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Деталі книги</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="/" style="color: var(--primary-color); text-decoration: none; font-weight: 500;">← Назад до каталогу</a>
+      
+      <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700; color: var(--text-color); display: flex; align-items: center; gap: 0.5rem; letter-spacing: -0.01em;">
+        <span>📖</span> <span style="color: var(--primary-color);">Каталог</span> книжок
+      </h1>
+      
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Змінити тему">🌓</button>
+    </div>
+  </header>
+  <main class="container">
+    <div id="loading-state">Завантаження деталей...</div>
+    <div id="error-state" class="hidden"></div>
+    <div id="book-details" aria-live="polite"></div>
+  </main>
+  
+  
+  <script type="module" src="/src/entries/details.ts"></script>
+</body>
+</html>
